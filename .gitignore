@@ -1,6 +1,5 @@
-project_one
+project_one/
 .idea/
 __pycache__
 *.log
 *.tmp
-.py
