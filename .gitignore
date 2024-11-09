@@ -1,4 +1,4 @@
-venv
+project_one
 .idea/
 __pycache__
 *.log

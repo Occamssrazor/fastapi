@@ -34,7 +34,7 @@ async def get_profile(email: str):
 
 @router.get("/", response_model=list[User])
 async def get_all_profiles():
-  return list(profiless_db.values()) 
+  return list(profiles_db.values()) 
 
 @app.get("/")
 async def root():
