@@ -5,4 +5,6 @@ RUN pip install --no-cache-dir --upgrade -r /docker_fast/requirements.txt
 
 COPY . /docker_fast
 
-CMD ["uvicorn", "/docker_fast/api:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 8000
+
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]

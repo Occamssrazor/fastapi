@@ -22,7 +22,7 @@ class User(BaseModel):
 @router.post("/", response_model=User, status_code=201)
 async def create_profile(user: User):
   if user.email in profiles_db:
-    raise HTTPException(status_code=400, detail="Профиль уже существует")
+    raise HTTPException(status_code=409, detail="Профиль уже существует")
   profiles_db[user.email] = user
   return user
 
